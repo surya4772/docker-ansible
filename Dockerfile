@@ -64,6 +64,9 @@ RUN echo "===> Enabling systemd..."  && \
     echo "===> Adding hosts for convenience..."   && \
     mkdir -p /etc/ansible                         && \
     echo 'localhost' > /etc/ansible/hosts
+ 
+RUN echo "host_key_checking = False" >> /etc/ansible/ansible.cfg
+ENV ANSIBLE_HOST_KEY_CHECKING False
 
 #
 # [Quote] https://hub.docker.com/_/centos/
