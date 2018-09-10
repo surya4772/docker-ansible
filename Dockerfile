@@ -55,6 +55,7 @@ RUN echo "===> Enabling systemd..."  && \
     pip install --upgrade pywinrm           && \
     pip install python-docx &&\
     yum -y install sshpass openssh-clients  && \
+    yum -y install git               && \
     \
     \
     echo "===> Removing unused YUM resources..."  && \
