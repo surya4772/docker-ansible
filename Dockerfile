@@ -53,9 +53,11 @@ RUN echo "===> Enabling systemd..."  && \
     echo "===> Installing handy tools (not absolutely required)..."  && \
     yum -y install python-pip               && \
     pip install --upgrade pywinrm           && \
-    pip install python-docx &&\
+    pip install python-docx && \
+    pip install mammoth && \
     yum -y install sshpass openssh-clients  && \
     yum -y install git               && \
+    yum -y install nc                && \
     \
     \
     echo "===> Removing unused YUM resources..."  && \
