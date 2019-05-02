@@ -69,7 +69,10 @@ RUN echo "===> Enabling systemd..."  && \
     mkdir -p /etc/ansible                         && \
     echo 'localhost' > /etc/ansible/hosts
  
-RUN echo "host_key_checking = False" >> /etc/ansible/ansible.cfg
+RUN echo "host_key_checking = False" >> /etc/ansible/ansible.cfg && \
+    echo "[defaults]" >> /etc/ansible/ansible.cfg && \
+    echo "remote_tmp = /tmp/ansible-$USER" >> /etc/ansible/ansible.cfg
+
 ENV ANSIBLE_HOST_KEY_CHECKING False
 
 #
