@@ -51,9 +51,9 @@ RUN echo "===> Enabling systemd..."  && \
     \
     \
     echo "===> Installing handy tools (not absolutely required)..."  && \
-    yum -y install python-pip               && \
-    pip install --upgrade pywinrm           && \
-    pip install python-docx &&\
+    yum -y install python3-pip               && \
+    pip3 install --upgrade pywinrm           && \
+    pip3 install python-docx &&\
     yum -y install sshpass openssh-clients  && \
     yum -y install git               && \
     \
